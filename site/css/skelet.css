@@ -1,0 +1,155 @@
+/*****Ce fichier CSS est la "base" des 4 autres pages******/
+/*Il est utilisé pour que nous puissions facilement dans un autre fichier css
+ changer les nouvelles choses que nous ajoutons pour chaque page.*/
+
+html {
+  background-color: #dddfd4;
+  /*la couleur de background*/
+}
+
+* {
+  box-sizing: border-box;
+  /*border: 1px solid red !important;*/
+  margin: auto;
+  font-family: 'Merriweather', serif;
+  /*le font par google*/
+}
+
+body {
+  height: 100%;
+  width: 1024px;
+  position: relative;
+  background-color: #FFFDE0;
+  border: 1px solid #D9791A;
+}
+main {
+  width: 100%;
+  padding: 2%;
+}
+/*****************menu avec les 4 boutons********************/
+/***** l'autre partie pour ce css est dans les media query **/
+header nav ul {
+  list-style-type: none;
+  /*pour eliminer les petits symobles*/
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+header nav ul li {
+  font-size: 20px;
+  display: block;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+  display: block;
+}
+
+/*ici pour le element paire et impaire je donne des differentes couleurs*/
+
+header nav ul li:nth-of-type(2n-1) {
+  background-color: #D9791A;
+}
+
+header nav ul li:nth-of-type(2n) {
+  background-color: #E88523
+}
+/*************hover menu quand nous planerons avec notre curseur****************/
+header nav ul li:hover {
+  background-color: #af641a;
+}
+
+/*****clearfix - pour ne pas avoir des problemes avec le float*****/
+header nav p {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/********************footer*********************************************/
+
+footer {
+  height: 90px;
+  width: 100%;
+  padding: 1% 2% 1% 2%;
+  text-align: center;
+  background-color: #666633;
+  color: #dddfd4;
+}
+
+/*le text a gauche*/
+
+footer p {
+  float: left;
+  width: 75%;
+  font-size: 16px;
+  padding-top: 2%;
+  padding-right: 2%;
+}
+
+/*le bouton a droit*/
+
+footer a {
+  float: left;
+  width: 25%;
+  height: 100%;
+  background-color: orange;
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+/**optimisation de page pour qu'elle soit responsive **/
+@media (max-width: 1024px) {
+  header nav ul li {
+    font-size: 2.2vw;
+  }
+  body {
+    width: 100%;
+  }
+  footer {
+    height: 10vw;
+  }
+  footer p {
+    font-size: 2vw;
+  }
+  footer a {
+    font-size: 3vw;
+    padding: 2vw;
+  }
+}
+
+/* important! j'ai fait le float de menu dans le @media query parce que
+si on utilise width plus grand que 410, le menu va etre horizontal
+comme ca c'est plus facile quand on utilise les portables*/
+
+@media (min-width: 410px) {
+  header nav ul li {
+    float: left;
+    width: 25%;
+    display: block;
+  }
+}
+
+/*et maintenat le menu est dans chaque ligne si <410px*/
+
+@media (max-width: 410px) {
+  header nav ul li {
+    float: left;
+    width: 100%;
+    padding: 1vw 2vw 1vw 2vw;
+  }
+  header nav ul li a{
+    padding: 1vw;
+    font-size: 2.5vw;
+  }
+
+}

@@ -1,0 +1,52 @@
+/*Le titre*/
+h1 {
+  font-size: 150% ;
+  padding-bottom: 3%;
+  text-align: center;
+}
+/*les proprietes pour le tableau*/
+table {
+  border-spacing: 0.5rem; /*rem-relative pour la taille*/
+  text-align: center;
+  width: 50%;
+}
+/*couleur pour chaque cellule*/
+td {
+  color: white;
+}
+td a {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 3%;
+
+}
+
+/*pour selecte le côté droit des cellules du tableau*/
+tbody tr td:nth-child(2n),tbody tr:nth-of-type(13) td:nth-of-type(1),tbody tr:nth-of-type(14) td:nth-of-type(1){
+  background-color: #938474 ;
+
+}
+/*pour chaque range*/
+tbody tr {
+  background-color: #e08523
+}
+/*Pour les cellules qui pointent vers les pages*/
+tbody tr:nth-of-type(1),tbody tr:nth-of-type(5), tbody tr:nth-of-type(10),tbody tr:nth-of-type(15) {
+  background-color: #915414;
+
+}
+
+/*Responsive tableau*/
+@media (max-width:410px) {
+  table {
+    font-size: 4vw;
+  }
+}
+@media (max-width: 700px) {
+  h1 {
+    font-size: 3vw;
+  }
+}

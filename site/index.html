@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="css/screen.css">
+  <title>Palais de Dioclétien</title>
+  <meta charset="UTF-8">
+  <!--J'utilise le font donne par google. J'ai copy-coller qui etaient sur la page-->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <meta name="author" content="21711292" />
+</head>
+
+<body>
+  <!--Ici on a le header avec les 2 texts sur l'image-->
+  <header>
+    <img id="Header1" src="img/peristil.jpg"  alt="Perystil, Split">
+    <h1>Split, Croatie</h1>
+    <p>Palais de Dioclétien</p>
+  </header>
+
+  <!--Main commence par ici-->
+  <main>
+    <!--La premiere section a le petit titre dans un rectangle-->
+    <section>
+      <h2>Palais de Dioclétien - Site du patrimoine mondial depuis 1979</h2>
+    </section>
+
+    <!--Cette deuxieme section est pour le texte-->
+    <section id="Section1">
+      <!--J'utilise heading4 dans la section parce que ca donne des Warnings si on n'a pas heading dans section-->
+      <h4>text</h4>
+      <p> Le Palais de Dioclétien (en croate : Dioklecijanova palača) est la résidence impériale fortifiée construite par l'empereur Dioclétien sur la côte dalmate pour s'y retirer après son abdication volontaire en 305. C'est l'un des édifices de l'Antiquité
+        tardive les mieux conservés. Ces vestiges sont préservés dans le cœur historique de Split, en Croatie. Contrairement à une légende populaire, la ville — Spalatum en latin — doit son nom à celui de la cité grecque voisine d'Aspalathos — « buisson
+        blanc » — et non au terme latin signifiant palais — palatium. L'empereur Dioclétien y a vécu l'essentiel des dernières années de sa vie et, à sa mort, son corps a été déposé dans un sarcophage placé dans le mausolée qu'il y avait fait construire.
+        </p>
+    </section>
+
+    <!--Ici se trouve le menu avec 3 boutons horizontal-->
+    <nav>
+      <ul>
+        <li><a href="pages/page2.html">L'histoire</a></li>
+        <li><a href="pages/page3.html">La ville</a></li>
+        <li><a href="pages/page4.html">Les faits</a></li>
+      </ul>
+    <!--On a besoin d'utiliser clearfix parce que on a des problemes avec float-->
+    <p>clearfix</p>
+
+    </nav>
+    <!--Le video est dans iframe (code generer par youtube) et dans aside c'est le video-->
+    <aside id="Video1">
+      <iframe src="https://www.youtube.com/embed/dZqV5eDswxE"
+        allowfullscreen></iframe>
+    </aside>
+  </main>
+
+  <!-- Le footer avec le bouton pour voir les resources utilise pour la page -->
+  <footer>
+    <p>Ceci est une page web réalisée par SOTIROSKI Filip (21711292) pour mon CC de Technologies Web - 2017</p>
+    <a href="pages/page5.html">  Resources  </a>
+  </footer>
+</body>
+
+</html>
